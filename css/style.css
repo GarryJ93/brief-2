@@ -1,0 +1,100 @@
+:root {
+  --background-card: #fff;
+  --background-learn: #f8f8f8;
+  --background-internal: #f3f4f5;
+  --box-shadow: 0 10px 29px rgba(0, 0, 0, 0.2);
+  --color-text: #172533;
+  --color-text-soft: #626e76;
+  --color-accent: #7c47c0;
+}
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+.card {
+  background-color: #ffffff;
+  width: 60%;
+  height: 90%;
+  box-shadow: var(--box-shadow);
+  color: var(--color-text);
+}
+.learn {
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f8f8;
+  font-family: "Poppins", sans-serif;
+ }
+.identifiants {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  margin-bottom: 20px;
+}
+label {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.85rem;
+  width: 80%;
+}
+h1 {
+  font-weight: 900;
+  font-size: 1.8rem;
+  padding: 20px 20px 0px 30px;
+  margin: 20px 10px;
+  text-align: left;
+}
+.form {
+  border: none;
+  background-color: var(--background-internal);
+  border-radius: 10px;
+  width: 100%;
+  padding: 20px 30px;
+  margin-top: 10px;
+}
+input {
+  color: var(--color-text-soft);
+  font-size: 1rem;
+  font-weight: 600;
+}
+br {
+  height: 10px
+}
+/* #remember {
+  transform: scale(1.6);
+  margin: 0 20px 0 50px;
+  vertical-align: middle;  
+} */
+.submit {
+  border: none;
+  color: #fff;
+  background-color: var(--color-accent);
+  border-radius: 10px;
+  height: 60px;
+  width: 80%;
+  margin: 40px;
+}
+#password {
+  font-size: 0.6rem;
+}
+input[type=checkbox] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none; 
+    border: 0.4px solid rgb(189, 185, 185);
+    height: 22px;
+    width: 21px;
+    border-radius: 5px;
+    vertical-align: middle;
+    margin: 0 10px 0 40px;
+}
+input[type=checkbox]:checked {
+  background-color: #7c47c0;
+  background-image: url("https://cdn-icons-png.flaticon.com/512/929/929424.png");
+  background-size: 90%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
