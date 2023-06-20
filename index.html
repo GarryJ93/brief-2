@@ -1,44 +1,68 @@
 <!DOCTYPE html>
 <html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge 4 - HTML & CSS</title>
 
-  <title>Challenge 4 - HTML & CSS </title>
+    <!-- ce css permet simplement de mettre en page la présentation -->
 
-  <!-- ce css permet simplement de mettre en page la présentation -->
-  <link rel="stylesheet" href="../css/presentation.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css">
-</head>
-
-<body>
-  <section class="learn">
-    <!-- Début de la zone d'entrainement -->
-    <div class="card">
-    <h1>Je me connecte avec mes identifiants</h1>
-    <fieldset class="identifiants">
-      <label for="email">Adresse email <br>
-        <input type="email" id="email" class="form" required placeholder="chuck@norris.com">
-      </label> <br>
-      <label for="password">Mot de passe <br>
-        <input type="password" id="password" class="form" required placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;">
-      </label>
-    </fieldset>
-    <label for="remember" id="align"><input type="checkbox" name="remember" id="remember">Se souvenir de moi</label> <br>
-    <input type="submit" value="Connexion" class="submit">
-  </div>
-    <!-- Fin de la zone d'entrainement -->
-  </section>
-
-  <section class="preview" data-content="challenge 4">
-    <img width="444px" src="img/objectif/login-form.png" alt="formulaire de connexion" />
-  </section>
-</body>
-
+  <body>
+    <section class="learn">
+      <!-- Début de la zone d'entrainement -->
+      <div class="card">
+        <div class="container">
+          <h1>Je me connecte avec mes identifiants</h1>
+          <fieldset class="identifiants">
+            <label for="email"
+              >Adresse email <br />
+              <input
+                type="email"
+                id="email"
+                class="form"                
+                placeholder="chuck@norris.com"
+                required
+              />
+            </label>
+            <br />
+            <label for="password"
+              >Mot de passe <br />
+              <input
+                type="password"
+                id="password"
+                class="form"                
+                placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;"
+                required
+              />
+            </label>
+          </fieldset>
+          <label for="remember"
+            ><input type="checkbox" name="remember" id="remember" />Se souvenir
+            de moi</label
+          >
+          <br />
+          <div class="btn-submit">
+            <input
+              type="submit"
+              value="Connexion"
+              class="submit"
+              method="post"
+              action="https://show.ratufa.io?ref=contact&type=query"
+            />
+          </div>
+        </div>
+      </div>
+      <!-- Fin de la zone d'entrainement -->
+    </section>
+  </body>
 </html>
