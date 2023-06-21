@@ -12,10 +12,12 @@
 }
 .card {
   background-color: #ffffff;
-  width: 60%;
+  width: 35%;
   height: 90%;
   box-shadow: var(--box-shadow);
   color: var(--color-text);
+  display: flex;
+  justify-content: center;
 }
 .learn {
   border: none;
@@ -38,13 +40,13 @@ label {
   text-transform: uppercase;
   font-weight: 700;
   font-size: 0.85rem;
-  width: 80%;
+  width: 100%;
 }
 h1 {
   font-weight: 900;
   font-size: 1.8rem;
-  padding: 20px 20px 0px 30px;
-  margin: 20px 10px;
+  /* padding: 20px 20px 0px 30px; */
+  /* margin: 20px 10px; */
   text-align: left;
 }
 .form {
@@ -53,7 +55,7 @@ h1 {
   border-radius: 10px;
   width: 100%;
   padding: 20px 30px;
-  margin-top: 10px;
+  margin: 10px 0;
 }
 input {
   color: var(--color-text-soft);
@@ -74,8 +76,8 @@ br {
   background-color: var(--color-accent);
   border-radius: 10px;
   height: 60px;
-  width: 80%;
-  margin: 40px;
+  width: 100%;
+  /* margin: 40px; */
 }
 #password {
   font-size: 0.6rem;
@@ -89,7 +91,7 @@ input[type=checkbox] {
     width: 21px;
     border-radius: 5px;
     vertical-align: middle;
-    margin: 0 10px 0 40px;
+    margin: 0 10px 0 0;
 }
 input[type=checkbox]:checked {
   background-color: #7c47c0;
@@ -97,4 +99,11 @@ input[type=checkbox]:checked {
   background-size: 90%;
   background-position: center;
   background-repeat: no-repeat;
+}
+.container{
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
 }
