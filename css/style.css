@@ -115,3 +115,10 @@ input[type="checkbox"]:checked {
   background-position: center;
   background-repeat: no-repeat;
 }
+.container{
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+}

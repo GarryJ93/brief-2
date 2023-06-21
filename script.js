@@ -1,4 +1,10 @@
-prevent.default();
+let bouton = document.getElementById('boutonSubmit');
+alert("js ok");
+console.log('test js ok');
+bouton.addEventListener('click', function()  {
+    alert("Clické");
+    console.log('test');
+})prevent.default();
 document.getElementById("submit").addEventListener("click", Identify());
 document.getElementById("email").addEventListener("change", Normalize());
 document.getElementById("password").addEventListener("change", Normalize());
