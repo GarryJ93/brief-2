@@ -15,6 +15,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/style.css" />
+    <script src="script.js" defer></script>
   </head>
 
   <body>
@@ -27,8 +28,10 @@
             <label for="email"
               >Adresse email <br />
               <input
+                name="email"
                 type="email"
                 id="email"
+                onchange="Normalize()"
                 class="form"                
                 placeholder="chuck@norris.com"
                 required
@@ -40,6 +43,7 @@
               <input
                 type="password"
                 id="password"
+                onchange="Normalize()"
                 class="form"                
                 placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;"
                 required
@@ -56,8 +60,8 @@
               type="submit"
               value="Connexion"
               class="submit"
-              method="post"
-              action="https://show.ratufa.io?ref=contact&type=query"
+              id="submit"
+              onclick="Identify()"
             />
           </div>
         </div>
