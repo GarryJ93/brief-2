@@ -31,24 +31,24 @@
                 name="email"
                 type="email"
                 id="email"
-                onchange="Normalize()"
                 class="form"                
                 placeholder="chuck@norris.com"
                 required
               />
             </label>
+            <p id="emailAlert"></p>
             <br />
             <label for="password"
               >Mot de passe <br />
               <input
                 type="password"
                 id="password"
-                onchange="Normalize()"
                 class="form"                
                 placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;"
                 required
               />
             </label>
+            <p id="passwordAlert"></p>
           </fieldset>
           <label for="remember"
             ><input type="checkbox" name="remember" id="remember" />Se souvenir
@@ -61,7 +61,6 @@
               value="Connexion"
               class="submit"
               id="submit"
-              onclick="Identify()"
             />
           </div>
         </div>

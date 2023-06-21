@@ -1,59 +1,61 @@
-let bouton = document.getElementById('boutonSubmit');
-alert("js ok");
-console.log('test js ok');
-bouton.addEventListener('click', function()  {
-    alert("Clické");
-    console.log('test');
-})prevent.default();
-document.getElementById("submit").addEventListener("click", Identify());
-document.getElementById("email").addEventListener("change", Normalize());
-document.getElementById("password").addEventListener("change", Normalize());
+const messagePassword = "Veuillez entrer un mot de passe valide minimum 5 caractères.";
+const messageEmail = "Veuillez entrer une adresse email valide.";
+const messagePasswordVide = "Veuillez entrer un mot de passe.";
+const messageEmailVide = "Veuillez entrer une adresse email.";             
 
-function Identify() {
-  let email = document.getElementById("email");
-  let password = document.getElementById("password");
-  if (email.value == "" && password.value == "") {
-    alert("Veuillez saisir votre email et votre mot de passe.");
-    email.style = "outline: 2px solid red;";
-    password.style = "outline: 2px solid red;";
-    return false;
+let bouton = document.getElementById('submit');
+let email = document.getElementById('email');
+let password = document.getElementById('password');
+let emailAlert = document.getElementById('emailAlert');
+let passwordAlert = document.getElementById('passwordAlert');
+
+bouton.addEventListener('click', identify);
+email.addEventListener('input',function(){normalize(email);normalizeAlert(emailAlert);});
+password.addEventListener('input',function(){normalize(password);normalizeAlert(passwordAlert);});
+
+function identify(){
+  if(email.value==""){
+    // email Vide
+    emailAlert.innerHTML = messageEmailVide;
+    email.style = "outline : 2px solid red;";
   }
-  if (email.value == "") {
-    alert("Merci de saisir votre e-mail");
-    email.style = "outline: 2px solid red;";
+  if(password.value==""){
+    // Password vide
+    passwordAlert.innerHTML = messagePasswordVide;
+    password.style = "outline : 2px solid red;";
+  }
+
+  if( email.value.length>0 && password.value.length>0 && !testEmail() && !testPassword()){
+    // Email et Mot de passe erronés
+    emailAlert.innerHTML = messageEmail;
+    passwordAlert.innerHTML = messagePassword; 
+  }else if(email.value.length>0 && !testEmail()){
+    // Email erroné
+    emailAlert.innerHTML = messageEmail;
+  }else if(password.value.length>0 && !testPassword()){
+    // Mot de passe erroné
+    passwordAlert.innerHTML = messagePassword;
+  }
+}
+function testEmail(){
+  if(!email.value.match(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,3}$/g)){
+    email.style = "outline : 2px solid red;";
     return false;
-  } else if (
-    !email.value.match(/^[\w-\.]+@([\w-]+\.)+[\w-]{2}$/g) &&
-    password.value == ""
-  ) {
-    alert("Veuillez saisir un email valide et votre mot de passe");
-    email.style = "outline: 2px solid red;";
-    password.style = "outline: 2px solid red;";
-    return false;
-  } else if (!email.value.match(/^[\w-\.]+@([\w-]+\.)+[\w-]{2}$/g)) {
-    alert("Merci de saisir un e-mail valide");
-    email.style = "outline: 2px solid red;";
-    return false;
-  } else if (password.value == "") {
-    alert("Merci de saisir votre mot de passe");
-    password.style = "outline: 2px solid red;";
-    return false;
-  } else {
-    alert("Identification réussie");
+  }else{
     return true;
   }
 }
-
-function Normalize() {
-  let email = document.getElementById("email");
-  let password = document.getElementById("password");
-  if (email.value != "" && password.value != "") {
-    email.style = "outline: none;";
-    password.style = "outline: none;";
-  } else if (email.value != "") {
-    email.style = "outline: none;";
-  } else if (password.value != "") {
-    password.style = "outline: none;";
+function testPassword(){
+  if(password.value.length<5){
+    password.style = "outline : 2px solid red;";
+    return false;
+  }else{
+    return true;
   }
-  return true;
+}
+function normalize(item){
+  item.style = "outline: none;";
+}
+function normalizeAlert(item){
+  item.innerHTML = "";
 }

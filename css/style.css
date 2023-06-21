@@ -122,3 +122,8 @@ input[type="checkbox"]:checked {
   flex-direction: column;
 
 }
+p{
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: red;
+}
